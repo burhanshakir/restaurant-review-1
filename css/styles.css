@@ -290,12 +290,27 @@ nav h1 a {
 	}
 
 	#restaurant-container, #reviews-container{
-		width: 100%;
+		width: 80%;
+		padding: 0 70px 30px 10px;
+	}
+
+	#restaurant-container{
+		padding-top: 100px;
+	}
+
+	#reviews-container{
+		padding-bottom: 60px;
 	}
 
 	#breadcrumb{
-		width: 100%;
+		width: 80%;
 	}
+
+	.inside #footer{
+		width: 90%;
+	}
+
+
 
 
 
