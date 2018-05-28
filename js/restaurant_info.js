@@ -52,6 +52,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
 
+  //Setting caption for each image
+  const caption = document.getElementById('restaurant-image-caption');
+  caption.innerHTML = restaurant.name;
+
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
 

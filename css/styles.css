@@ -208,7 +208,7 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 45%;
 }
 #restaurant-name {
   color: #f18200;
@@ -279,14 +279,14 @@ nav h1 a {
 
 
 
-/* Making it mobile friendly */
+/* Making it responsive*/
 
-@media only screen and (max-width: 512px){
+@media only screen and (max-width: 900px){
 
 	.inside #map-container{
 		width: 100%;
 		height: 450px;
-		/* margin-top: 100px; */
+		margin-top: 100px;
 		position: relative;
 	}
 
@@ -310,9 +310,4 @@ nav h1 a {
 	.inside #footer{
 		width: 90%;
 	}
-
-
-
-
-
 }
