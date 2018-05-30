@@ -146,6 +146,12 @@ class DBHelper {
     return (`./restaurant.html?id=${restaurant.id}`);
   }
 
+  static srcsetImageUrlForRestaurant(restaurant) {
+    let photograph = restaurant.photograph.split('.')[0];
+    let srcsizeSet = `/img/${photograph}-464.jpg 464w,/img/${restaurant.photograph.split('.')[0]}-900.jpg 900w,`;
+    return (srcsizeSet);
+  }
+
   /**
    * Restaurant image URL.
    */
