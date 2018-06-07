@@ -11,6 +11,15 @@ if ('serviceWorker' in navigator) {
 }
 
 
+// Fetch API
+fetch('http://localhost:1337/restaurants')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
+
 
 let restaurants,
   neighborhoods,
