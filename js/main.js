@@ -12,13 +12,13 @@ if ('serviceWorker' in navigator) {
 
 
 // Fetch API
-fetch('http://localhost:1337/restaurants')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(myJson) {
-    console.log(myJson);
-  });
+// fetch('http://localhost:1337/restaurants')
+//   .then(function(response) {
+//     return response.json();
+//   })
+//   .then(function(myJson) {
+//     console.log(myJson);
+//   });
 
 
 let restaurants,
@@ -167,6 +167,7 @@ createRestaurantHTML = (restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = "This is an image of the " + restaurant.name + " restaurant"; //Making images accessible
   image.srcset = DBHelper.srcsetImageUrlForRestaurant(restaurant);
+  image.oneerror = "this.src='/img/10.jpg'";
   image.setAttribute('tabindex', 0);
 
   li.append(image);
