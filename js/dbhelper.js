@@ -34,6 +34,8 @@ class DBHelper {
     // };
     // xhr.send();
 
+    // Using the Fetch API
+
     fetch(DBHelper.DATABASE_URL)
       .then(function(response) {
         return response.json();
@@ -181,7 +183,7 @@ class DBHelper {
    * Restaurant image URL.
    */
   static imageUrlForRestaurant(restaurant) {
-    return (`/img/${restaurant.photograph}`);
+    return (`/img/${restaurant.photograph}.jpg`);
   }
 
   /**
