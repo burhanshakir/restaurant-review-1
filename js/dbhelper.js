@@ -16,6 +16,8 @@ class DBHelper {
     return `http://localhost:${port}/restaurants`; //Changing your url
   }
 
+
+
   /**
    * Fetch all restaurants.
    */
@@ -47,7 +49,29 @@ class DBHelper {
         const restaurants = myJson;
         callback(null, restaurants);
 
+        // Adding restaurants to indexDBs
+
+        idbPromise.then(function(db){
+          var tx = db.transaction('restaurants','readwrite');
+          var keyValStore = tx.objectStore('restaurants');
+
+          restaurants.forEach(function(restaurant){
+
+            keyValStore.put(restaurant);
+
+          })
+
+          // return tx.complete;
+        }).then(function(val){
+          console.log('Added restaurant to restaurants');
+        });
+
+
+
       });
+
+
+
   }
 
   /**
